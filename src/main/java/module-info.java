@@ -1,6 +1,5 @@
-module com.thebadprogrammer.autoclicker {
+module com.example.app {
     requires javafx.controls;
-    requires com.github.kwhat.jnativehook;
 
-    exports com.thebadprogrammer.autoclicker;
+    exports com.example.app;
 }

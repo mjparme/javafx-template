@@ -16,12 +16,12 @@ javafx {
 }
 
 application {
-    mainModule = "com.thebadprogrammer.autoclicker"
-    mainClass = "com.thebadprogrammer.autoclicker.AutoClicker"
+    mainModule = "com.example.app"
+    mainClass = "com.example.app.MyApplication"
 }
 
 dependencies {
-    implementation 'com.github.kwhat:jnativehook:2.2.2'
+
 }
 
 jlink {
