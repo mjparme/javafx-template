@@ -1,0 +1,32 @@
+plugins {
+  id 'application'
+  id 'org.openjfx.javafxplugin' version '0.0.12'
+  id 'org.beryx.jlink' version '2.25.0'
+}
+
+def jserialVersion = "2.6.2"
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "18"
+    modules = [ 'javafx.controls' ]
+}
+
+application {
+    mainModule = "com.thebadprogrammer.autoclicker"
+    mainClass = "com.thebadprogrammer.autoclicker.AutoClicker"
+}
+
+dependencies {
+    implementation 'com.github.kwhat:jnativehook:2.2.2'
+}
+
+jlink {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'AutoClicker'
+    }
+}
