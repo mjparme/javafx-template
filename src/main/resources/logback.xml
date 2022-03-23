@@ -1,0 +1,32 @@
+<configuration scan="true" scanPeriod="30 seconds">
+    <variable scope="local" name="defaultPattern" value="%date{HH:mm:ss.SSS} [Thread.%t] %-30c{1} %-5p %msg%n"/>
+    <variable scope="local" name="mainLogFileName" value="/${user.home}/app.log"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${defaultPattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${mainLogFileName}</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${mainLogFileName}.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>2</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${defaultPattern}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.example" additivity="false" level="debug">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
