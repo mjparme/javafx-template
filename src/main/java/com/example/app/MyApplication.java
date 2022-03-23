@@ -1,18 +1,13 @@
 package com.example.app;
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
+import javafx.application.*;
+import javafx.event.*;
+import javafx.geometry.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.*;
+import org.slf4j.*;
 
 /**
  * User: mjparme
@@ -20,6 +15,8 @@ import javafx.stage.Stage;
  * Time: 8:49 PM
  */
 public class MyApplication extends Application {
+    private final static Logger logger = LoggerFactory.getLogger(MyApplication.class);
+
     private Button okButton;
     private Button cancelButton;
     private TextArea textArea;
@@ -61,6 +58,7 @@ public class MyApplication extends Application {
     }
 
     private final EventHandler<ActionEvent> okAction = event -> {
+        logger.debug("Ok pressed");
         textArea.appendText("Ok Pressed\n");
     };
 
