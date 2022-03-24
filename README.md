@@ -24,7 +24,7 @@ as you go).
 
 ## Git
 
-1. Clone the project with `git clone https://github.com/mjparme/javafx-template.git` (or fork it and create a clone of your fork)
+1. Clone the project with `git clone https://github.com/mjparme/javafx-template.git <name-of-your-project>` (or fork it and create a clone of your fork)
 1. Remove the `.git` directory so it is no longer tied to this repo
 1. Execute `git init .` to put it back under version control
 1. Push to a remote if you want 
