@@ -21,9 +21,11 @@ An attempt will be made to keep the repository up-to-date with latest JavaFX and
 IntelliJ will happily configure itself from a Gradle build. 
 
 1. Open IntelliJ
-1. File -> Open
-1. In the file chooser dialog select the directory that contains the local repository and press the `Open` button. 
+2. File -> Open
+3. In the file chooser dialog select the directory that contains the local repository and press the `Open` button. 
 IntelliJ will notice the directory has a `build.gradle` in it and then do its thing and in a few minutes you should be good to go.
+4. To run it go to `MyApplication.java` and press the green arrow in the gutter next to the class name or 
+next to the `main()` method. Or you can open a terminal and execute `./gradlew run`
 
 
 # Gradle
