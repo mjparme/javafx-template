@@ -2,10 +2,23 @@
 
 This is a template project to create a modularized JavaFX application. It uses Gradle for its build and includes
 [The Badass JLink Plugin](https://badass-jlink-plugin.beryx.org/releases/latest/) to create custom runtime images 
-and platform specific applications with bundled runtimes with jpackage. It includes Logback for logging and it comes 
-with a reasonable default logging configuration that logs to STDOUT and to a file at the path `${user.home}/app.log` 
+and platform specific applications with bundled runtimes with jpackage.
 
 An attempt will be made to keep the repository up-to-date with latest JavaFX and Gradle (and gradle plugin) versions.
+
+## Logging
+It includes Logback for logging and it comes with a reasonable default logging configuration that logs to STDOUT and 
+to a file at the path `${user.home}/app.log`
+
+An alpha version of Logback 1.3 is used due to some problems with 1.2.11 being used in a modularized
+application. See: https://jira.qos.ch/browse/LOGBACK-1380
+
+
+## Modularization
+
+The application is modularized so that slimmed down runtimes can be bundled with the application
+(technically you can do this without modules but it is just easier to keep track of the modules in `module-info.java` 
+as you go).
 
 # Using the Project
 
@@ -30,7 +43,7 @@ next to the `main()` method. Or you can open a terminal and execute `./gradlew r
 
 # Gradle
 
-The project includes the Gradle Wrapper so no local installation of Gradle is needed. 
+The project includes the [Gradle Wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) so no local installation of Gradle is needed. 
 
 ## Tasks
 
