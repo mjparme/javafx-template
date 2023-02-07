@@ -7,12 +7,9 @@ and platform specific applications with bundled runtimes with jpackage.
 An attempt will be made to keep the repository up-to-date with latest JavaFX and Gradle (and gradle plugin) versions.
 
 ## Logging
+
 It includes Logback for logging and it comes with a reasonable default logging configuration that logs to STDOUT and 
 to a file at the path `${user.home}/app.log`
-
-An alpha version of Logback 1.3 is used due to some problems with 1.2.11 being used in a modularized
-application. See: https://jira.qos.ch/browse/LOGBACK-1380
-
 
 ## Modularization
 
@@ -25,7 +22,7 @@ as you go).
 ## Git
 
 1. Clone the project with `git clone https://github.com/mjparme/javafx-template.git <name-of-your-project>` (or fork it and create a clone of your fork)
-1. Remove the `.git` directory so it is no longer tied to this repo
+1. Remove the `.git` directory so it is no longer tied to this repo 
 1. Execute `git init .` to put it back under version control
 1. Push to a remote if you want 
 
