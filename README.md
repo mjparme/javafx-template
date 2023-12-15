@@ -11,7 +11,7 @@ to a file at the path `${user.home}/app.log`
 
 ## Modularization
 
-The application is modularized so that slimmed down runtimes can be bundled with the application
+The application is modularized so that slimmed down runtimes can be bundled with the application.
 
 # Using the Project
 
