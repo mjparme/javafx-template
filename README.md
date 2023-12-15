@@ -4,8 +4,6 @@ This is a template project to create a modularized JavaFX application. It uses G
 [The Badass JLink Plugin](https://badass-jlink-plugin.beryx.org/releases/latest/) to create custom runtime images 
 and platform specific applications with bundled runtimes with jpackage.
 
-An attempt will be made to keep the repository up-to-date with latest JavaFX and Gradle (and gradle plugin) versions.
-
 ## Logging
 
 It includes Logback for logging and it comes with a reasonable default logging configuration that logs to STDOUT and 
@@ -14,8 +12,6 @@ to a file at the path `${user.home}/app.log`
 ## Modularization
 
 The application is modularized so that slimmed down runtimes can be bundled with the application
-(technically you can do this without modules but it is just easier to keep track of the modules in `module-info.java` 
-as you go).
 
 # Using the Project
 
