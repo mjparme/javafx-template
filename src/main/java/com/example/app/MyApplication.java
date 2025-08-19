@@ -65,8 +65,4 @@ public class MyApplication extends Application {
     private final EventHandler<ActionEvent> cancelAction = event -> {
         textArea.appendText("Cancel Pressed\n");
     };
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
